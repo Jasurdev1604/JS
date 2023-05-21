@@ -173,7 +173,7 @@
 
 //!Number
 
-console.log(0.0005.toFixed(5));
+// console.log(0.0005.toFixed(5));
 
 // let a = '0.5 + 0.6';
 
@@ -181,3 +181,12 @@ console.log(0.0005.toFixed(5));
 // console.log(parseFloat(a));// 0.5
 // console.log(parseInt(a)); // 0
 // console.log(eval(a));//1.1
+
+// let a = 11;
+// console.log(a.toString(16));
+
+// console.log(Object.is('none' , 's'));
+
+// let a = 0.0022205;
+
+// console.log(a.toPrecision(10));
