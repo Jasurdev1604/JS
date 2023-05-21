@@ -467,3 +467,53 @@ let arr = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , ];
 //     return curr + value
 // } , 0)
 
+//!CRUD
+
+let users = [
+    {id:1 , name:'eshamat' , age:15},
+    {id:2 , name:'toshmat' , age:5},
+    {id:3 , name:'xolmat' , age:20},
+    {id:4 , name:'gulmat' , age:50},
+    {id:5 , name:'oshmat' , age:16},
+]
+
+//!read filter sort 
+
+// let res = users.filter((e) => {
+//     return e.age > 18
+// })
+
+//!delate filter
+
+// const delate = (id) => {
+//     users = users.filter((e) => e.id !== id);
+// }
+
+// delate(4)
+
+//!create
+
+// const add = ({name , age}) => {
+//     users = [...users , {id:users.length + 1 ,name , age}] 
+// }
+
+// add({name:'jasur' , age:19})
+
+//!update
+
+const update = (id , name , age) => {
+    let res = users.map((e) => {
+        if(e.id == id) {
+            e.name = name;
+            e.age = age;
+        }
+        return e
+    })
+    users = res
+}
+
+update(6 , 'jasurbek' , 9)
+
+console.log(users);
+
+
