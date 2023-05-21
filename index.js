@@ -190,3 +190,100 @@
 // let a = 0.0022205;
 
 // console.log(a.toPrecision(10));
+
+//!Math
+
+// console.log(Math.PI);//3.14
+// console.log(Math.abs(-10));//10
+// console.log(Math.round(-0.55));//-1
+// console.log(Math.ceil(-0.55));//-0
+// console.log(Math.floor(-0.55));//-1
+// console.log(Math.trunc(-0.55));//0
+// console.log(Math.random() * 10);//0-1
+
+// console.log(Math.sign(0));
+
+//!String
+
+// let str = 'jasurbek'//type string
+
+// const str1 = new String('jasurbek') //type obj
+
+// console.log(str1 === str);//false
+
+// let a = 'jas'
+// let b = 'jasur'
+// a ning ichida b bolsa return  1 , a === b bolsa return 0 , a ning ichida bolmasa return -1
+// console.log(a.localeCompare(b));
+
+//! String Methods
+
+let str = 'JasuebekOtelbayev'
+
+//! indexOf()
+
+// console.log(str.indexOf('v'));
+
+//! lastIndexOf()
+
+// console.log(str.lastIndexOf('v'));
+
+//!includes()
+
+// console.log(str.includes('Jas'));
+
+//!endsWith()
+
+// console.log(str.endsWith('bek'));
+
+//!stertWith()
+
+// console.log(str.startsWith("Jas"));
+
+//!padEnd()
+
+// console.log(str.padEnd(20 , 'n'));
+
+//!padStart()
+
+// console.log(str.padStart(30 , 'n'));
+
+//!slice()
+
+// console.log(str.slice(-7 , 16));
+
+//!substring()
+
+// console.log(str.substring(5));
+
+//!substr()
+
+// console.log(str.substr(10 , 5));
+
+//!trim()
+
+// console.log('        jasuebek'.trimStart().length);
+// console.log('jasuebek       '.trimEnd().length);
+// console.log('        jasuebek       '.trim().length);
+
+//!split()
+
+// let arr = str.split("a")
+
+// console.log(arr.join(""));
+
+//! concat()
+
+// console.log('none'.concat(str));
+
+//!valueOf()
+
+// str = new String('jasurbek')
+// console.log(str.valueOf());
+
+//!for of 
+
+// for (const i of str) {
+//     console.log(i);
+// }
+
