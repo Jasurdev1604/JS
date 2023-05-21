@@ -287,3 +287,183 @@ let str = 'JasuebekOtelbayev'
 //     console.log(i);
 // }
 
+//!Arrays
+
+// let arr = [1 , 2 , 3 , 'jasur' , obj={}];
+
+// console.log(arr[arr.length - 1]);
+
+//!at();
+// console.log(arr.at(-2));
+
+// let array = new Array(5)
+
+// array[0] = 'jasue'
+// array[10] = 50
+
+// console.log(array.length);
+
+//! Array methods
+
+let arr = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , ];
+
+//! toString()
+
+// console.log(typeof arr.toString("")); 1 , 2 , 3 , 4 , 5 , ...
+
+//!join()
+
+// console.log(arr.join('+')); 1+2+3+4+5+6+7+8+9
+
+//!concat()
+
+// console.log([0].concat(arr));[0,1,2,...]
+
+// console.log([] == false);
+
+//!js falsy valuse
+//! false , null , undefined , "" , [] , 0 , NaN
+
+//!for loop
+
+// for(let i = 0; i < arr.length; i++){
+//     console.log(i , arr[i]-1);
+// }
+
+//!For of
+
+// for(let i of arr){
+//     console.log(i);
+// }
+
+// for(let i in arr){
+//     console.log(typeof i);
+// }
+
+//!push()
+
+// arr.push('none')
+
+//!pop()
+
+// arr.pop()
+
+//!unshift()
+
+// arr.unshift('none');
+
+//!shift()
+
+// arr.shift()
+
+//!splice()
+
+// let b = arr.splice(0 , 5)
+// console.log(arr);
+// console.log(b.concat(arr));
+
+//!slice()
+
+// console.log(arr.slice(0 , 5));
+
+//!indexof()
+
+// console.log(arr.indexOf('none'));
+
+// console.log('jasuebka'.indexOf("a"));
+
+//!lastIndeOf();
+
+// console.log(arr.lastIndexOf(8));
+// console.log(arr.indexOf(8));
+
+//!split()
+
+// arr = 'jasurbek'.split('')
+
+// console.log(arr);
+
+//!reverse
+
+// console.log(arr.reverse());
+
+//!includes()
+
+// console.log(arr.includes(5));
+
+//!filter()
+
+// let res = arr.filter((e) => {
+//     return e === 5
+// })
+
+// console.log(res);
+
+//!sort()
+
+// let res = arr.sort((a , b) => b - a)
+// console.log(res);
+
+// arr = ['a' , 'm' , 'b' , 'r' , 'p']
+
+// console.log(arr.sort((b , a) => a.localeCompare(b)));
+
+//!find()
+
+// let res = arr.find((e) => false)
+// console.log(res);
+
+//!findIndex()
+
+// console.log(arr.findIndex((e) => e = 1));
+// console.log(arr.indexOf(1));
+
+//!forEach()
+
+// arr.forEach((e) => {
+//     console.log(e);
+// })
+
+//!map()
+
+// let res = arr.map(e => (e > 5)) 
+
+// console.log(res);
+
+//!every()
+
+// console.log(arr.every((a) => a > 0));
+
+//!some()
+
+// console.log(arr.some((e) => e > 0));
+
+//!fill() 
+
+// let res = arr.fill(0 , -1)
+// console.log(res);
+
+//!copyWithIn()
+
+// let res = arr.copyWithin(0 , 2 , 5)
+// console.log(res);
+
+//!flat()
+
+// arr = [0 , [1 , [2 , [3 , 0] , 4] , 5] , 6]
+
+// console.log(arr.flat(Infinity));
+
+//!flatMap()
+
+// let res = arr.flatMap((e) => e)
+
+// console.log(res);
+
+//!reduce()
+
+// let res = arr.reduce((curr , value) => {
+//     console.log(curr + ' and ' + value + ' then ' + eval(curr + value));
+//     return curr + value
+// } , 0)
+
