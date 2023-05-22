@@ -305,7 +305,7 @@ let str = 'JasuebekOtelbayev'
 
 //! Array methods
 
-let arr = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , ];
+// let arr = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , ];
 
 //! toString()
 
@@ -469,13 +469,13 @@ let arr = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , ];
 
 //!CRUD
 
-let users = [
-    {id:1 , name:'eshamat' , age:15},
-    {id:2 , name:'toshmat' , age:5},
-    {id:3 , name:'xolmat' , age:20},
-    {id:4 , name:'gulmat' , age:50},
-    {id:5 , name:'oshmat' , age:16},
-]
+// let users = [
+//     {id:1 , name:'eshamat' , age:15},
+//     {id:2 , name:'toshmat' , age:5},
+//     {id:3 , name:'xolmat' , age:20},
+//     {id:4 , name:'gulmat' , age:50},
+//     {id:5 , name:'oshmat' , age:16},
+// ]
 
 //!read filter sort 
 
@@ -501,19 +501,168 @@ let users = [
 
 //!update
 
-const update = (id , name , age) => {
-    let res = users.map((e) => {
-        if(e.id == id) {
-            e.name = name;
-            e.age = age;
-        }
-        return e
-    })
-    users = res
-}
+// const update = (id , name , age) => {
+//     let res = users.map((e) => {
+//         if(e.id == id) {
+//             e.name = name;
+//             e.age = age;
+//         }
+//         return e
+//     })
+//     users = res
+// }
 
-update(6 , 'jasurbek' , 9)
+// update(6 , 'jasurbek' , 9)
+// update(1 , 'jasurbek' , 9)
 
-console.log(users);
+// console.log(users);
 
 
+// let [a , b , c , d , f] = users
+
+// console.log(a.age);
+
+
+//! Date()
+
+// let date = new Date();
+
+// console.log(date.getDate()); //22
+// console.log(date.getDay());//1
+// console.log(date.getMonth());//4 -> may
+// console.log(date.getFullYear());//2023
+// console.log(date.getTime()); // 1970dan boshlab sekund
+// console.log(date.getMinutes());//41
+// console.log(date.getSeconds());//52
+// console.log(Date.now());
+
+//!JSON
+
+// let user = {
+//     id:1,
+//     name:'jasurbek',
+//     surname:'otelbayev',
+//     age:19,
+//     status:'student',
+// }
+
+
+// user = JSON.stringify(user , ['id' , 'name' , 'surname' , 'age'] , 2)
+
+// console.log(user);
+// console.log(JSON.parse(user));
+
+//!Map()
+
+// let map = new Map([['name' , 'jasur'] , ['age' , 19] , ['status' , 'student']]);
+
+// map.name = 'jasurbek'
+
+// console.log(map);
+// map.set('name' , 'jasurbek')
+// map.set('age' , 19)
+// map.set('status' , 'student')
+
+
+// console.log(map.get('age'));
+// console.log(map.has('status'));
+
+// map.delete('age')
+
+// map.clear()
+
+// console.log(map);
+
+// console.log(map.keys());
+// console.log(map.values());
+// console.log(map.entries());
+
+// for (const iterator of map.entries()) {
+//     console.log(iterator);
+// }
+
+// let gen = map.entries();
+
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+
+//!Set();
+
+// let set = new Set(['jasurbek' , 'otelbayev' , 19]);
+// console.log(set);
+// set[0] = 'jasure' 
+
+// set.add('jasurbek');
+// set.add('otelbayev');
+// set.add(19)
+// set.add(19)
+
+// console.log(set.has(19));
+// set.delete(19)
+// set.clear()
+// console.log(set.keys());
+// console.log(set.values());
+// console.log(set.entries());
+
+// let gen = set.entries();
+
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+
+//! Recursion function
+
+// let webbrain = {
+//     frontend:[
+//         {course:'react' , price:1},
+//         {course:'vue' , price:1},
+//         {course:'angular' , price:1},
+//     ] , 
+//     backend:[
+//         {course:'java' , price:1},
+//         {course:'php' , price:1}
+//     ],
+//     mobile:{
+//         andriod:[
+//             {course:'flutter' , price:1}
+//         ],
+//         ios:[
+//             {course:'dart' , price:1}
+//         ]
+//     }
+// }
+
+
+// let sum = 0;
+// function recursion(obj) {
+//     if(Array.isArray(obj)){
+//         obj.map((e) => {
+//             sum += e.price
+//         })
+//     } else {
+//         for (const i in obj) {
+//             recursion(obj[i])
+//         }
+//     }
+//     return sum
+// }
+
+// console.log(recursion(webbrain));
+
+
+// function recursionReduce(obj){
+//     if(Array.isArray(obj)){
+//         return obj.reduce((a,b) => a + b.price , 0);
+//     } 
+//     else {
+//         let sum = 0
+//         for (let i of Object.values(obj)) {
+//             sum += recursionReduce(i)
+//         }
+//         return sum
+//     }
+// } 
+
+// console.log(recursionReduce(webbrain));
