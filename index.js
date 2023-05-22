@@ -3,7 +3,7 @@
 
 //! Data Types
 
-// 8ta data typelar bor 
+// 8ta data typelar bor
 // String , Number , BigInt , Boolean , Undefined , null , Symbol , Object
 
 // console.log(undefined == null);
@@ -28,7 +28,7 @@
 // console.log(t);
 
 //!Type Convertion
- 
+
 // let m = '1,45vsfsvsb' , n = 10.5;
 
 // console.log(parseFloat(n));
@@ -56,7 +56,7 @@
 
 //!For loop
 
-// let i =5 
+// let i =5
 
 // for( ;i < 10; i++){
 //     console.log(i);
@@ -126,7 +126,6 @@
 // console.log(obj1);
 // console.log(obj2);
 
-
 // let name = 'jasurbek';
 
 // obj = {
@@ -134,7 +133,6 @@
 // }
 
 // console.log(obj);
-
 
 // for (const key in obj) {
 //     console.log(obj[key]);
@@ -144,7 +142,7 @@
 
 // console.log(obj);
 
-// let obj = 
+// let obj =
 // {
 //     name:'fvdf',
 //     func(){
@@ -218,7 +216,7 @@
 
 //! String Methods
 
-let str = 'JasuebekOtelbayev'
+let str = "JasuebekOtelbayev";
 
 //! indexOf()
 
@@ -281,7 +279,7 @@ let str = 'JasuebekOtelbayev'
 // str = new String('jasurbek')
 // console.log(str.valueOf());
 
-//!for of 
+//!for of
 
 // for (const i of str) {
 //     console.log(i);
@@ -426,7 +424,7 @@ let str = 'JasuebekOtelbayev'
 
 //!map()
 
-// let res = arr.map(e => (e > 5)) 
+// let res = arr.map(e => (e > 5))
 
 // console.log(res);
 
@@ -438,7 +436,7 @@ let str = 'JasuebekOtelbayev'
 
 // console.log(arr.some((e) => e > 0));
 
-//!fill() 
+//!fill()
 
 // let res = arr.fill(0 , -1)
 // console.log(res);
@@ -477,7 +475,7 @@ let str = 'JasuebekOtelbayev'
 //     {id:5 , name:'oshmat' , age:16},
 // ]
 
-//!read filter sort 
+//!read filter sort
 
 // let res = users.filter((e) => {
 //     return e.age > 18
@@ -494,7 +492,7 @@ let str = 'JasuebekOtelbayev'
 //!create
 
 // const add = ({name , age}) => {
-//     users = [...users , {id:users.length + 1 ,name , age}] 
+//     users = [...users , {id:users.length + 1 ,name , age}]
 // }
 
 // add({name:'jasur' , age:19})
@@ -517,11 +515,9 @@ let str = 'JasuebekOtelbayev'
 
 // console.log(users);
 
-
 // let [a , b , c , d , f] = users
 
 // console.log(a.age);
-
 
 //! Date()
 
@@ -546,7 +542,6 @@ let str = 'JasuebekOtelbayev'
 //     status:'student',
 // }
 
-
 // user = JSON.stringify(user , ['id' , 'name' , 'surname' , 'age'] , 2)
 
 // console.log(user);
@@ -562,7 +557,6 @@ let str = 'JasuebekOtelbayev'
 // map.set('name' , 'jasurbek')
 // map.set('age' , 19)
 // map.set('status' , 'student')
-
 
 // console.log(map.get('age'));
 // console.log(map.has('status'));
@@ -591,7 +585,7 @@ let str = 'JasuebekOtelbayev'
 
 // let set = new Set(['jasurbek' , 'otelbayev' , 19]);
 // console.log(set);
-// set[0] = 'jasure' 
+// set[0] = 'jasure'
 
 // set.add('jasurbek');
 // set.add('otelbayev');
@@ -619,7 +613,7 @@ let str = 'JasuebekOtelbayev'
 //         {course:'react' , price:1},
 //         {course:'vue' , price:1},
 //         {course:'angular' , price:1},
-//     ] , 
+//     ] ,
 //     backend:[
 //         {course:'java' , price:1},
 //         {course:'php' , price:1}
@@ -633,7 +627,6 @@ let str = 'JasuebekOtelbayev'
 //         ]
 //     }
 // }
-
 
 // let sum = 0;
 // function recursion(obj) {
@@ -651,11 +644,10 @@ let str = 'JasuebekOtelbayev'
 
 // console.log(recursion(webbrain));
 
-
 // function recursionReduce(obj){
 //     if(Array.isArray(obj)){
 //         return obj.reduce((a,b) => a + b.price , 0);
-//     } 
+//     }
 //     else {
 //         let sum = 0
 //         for (let i of Object.values(obj)) {
@@ -663,6 +655,237 @@ let str = 'JasuebekOtelbayev'
 //         }
 //         return sum
 //     }
-// } 
+// }
 
 // console.log(recursionReduce(webbrain));
+
+//!Scope and Cloauser
+
+// console.log(a); Can not acces befor initialization
+// console.log(b);
+
+// let a = 0
+// var b = 10\
+
+//! lexical envoirment -> a ni bitinchi local memorydan qidiradi topilsamasa global memoryga otadi
+// let a = 15
+
+// function getData() {
+//     console.log(a);
+// }
+
+// getData()
+
+//!Closuer - function ichida globaldan variable or innenr function ichida auter functrion verabilsini olib ishlatishga aytiladi
+
+// function outer() {
+//     let b = 10
+//     function inner(){
+//         console.log(b);
+//     }
+//     inner()
+// }
+
+// outer()
+
+//!old var and global object
+
+// {
+//     let a = 10
+//     var b = 25
+// }
+
+// console.log(a);
+// console.log(b);
+
+//! IIFE -> immideatly invoked function expression
+
+// var counter = (function() {
+//     let count = 0;
+
+//     function increment() {
+//       count++;
+//       console.log("Count:", count);
+//     }
+
+//     function decrement() {
+//       count--;
+//       console.log("Count:", count);
+//     }
+
+//     return {
+//       increment: increment,
+//       decrement: decrement
+//     };
+//   })();
+
+//   counter.increment();
+//   counter.increment();
+//   counter.decrement();
+
+// let iife = (function(){
+//     var a = 15;
+//     function inc(){
+//         a++
+//         console.log(a);
+//     }
+//     function dec(){
+//         a--
+//         console.log(a);
+//     }
+//     return {
+//         inc:inc,
+//         dec:dec
+//     }
+// })()
+
+// iife.inc()
+// iife.dec()
+
+// globalThis
+
+// globalThis.a = 50
+
+// let a = 20
+
+// globalThis.console.log("hello")
+
+//!NFE
+
+// let func = function newFunc(){
+//     console.log('none');
+// }
+
+// func()
+
+//!new Function
+// let f = 521
+// let fun = new Function(`
+
+//     let a = ${f};
+//     let b = 20;
+
+//     return a + b
+
+// `)
+
+// console.log(fun());
+
+//! setTimeout();
+
+// console.log('starting...');
+
+// setTimeout(() => {
+//     console.log('setTimeout');
+// }, 10000);
+
+// console.log('finish!');
+
+//!CallStack
+//!webAPI
+//!Queue
+
+//!setInterval()
+
+// let a = setInterval(() => {
+//     console.log('jasurbek');
+// }, 1000);
+
+// setTimeout(() => {
+//     clearTimeout(a)
+// } , 5000)
+
+//!call apply bind -> contaxtga malumot biriktiradi
+
+// let user = {
+//     name:'jasuerbek',
+//     age:19
+// }
+
+// let getName = function(a , b){
+//     console.log(`hi my name is ${this.name}. I am ${this.age} years old!` + a + b);
+// }
+
+// getName.call(user , ' eshamt' , ' toshmat')
+// getName.apply(user , [' eshmat' , ' toshmat'])
+// getName.bind(user , ' eshmat' , ' toshmat')()
+
+//!Flag properties
+
+let user = {
+  name: "jasurbek",
+  age: 19,
+};
+
+// let a = Object.getOwnPropertyDescriptor(user , 'name')
+
+// console.log(a);
+
+// Object.defineProperty(user , 'name' , {
+//     writable : false,
+//     value:'none'
+// })
+
+// console.log(user);
+
+// user.name = 'none'
+// console.log(user);
+// for (const iterator in user) {
+//     console.log(iterator);
+// }
+
+//!DDOS Attack
+
+// let sum = (a) => {
+//     return (b) => {
+//         if(b) {
+//             return sum(a + b)
+//         }
+//         return a
+//     }
+// }
+
+// console.log(sum(1)(2)(3)(4)(5)());
+
+// let cards = document.getElementById('cards')
+
+//     fetch("https://jsonplaceholder.typicode.com/photos")
+//     .then((res) => res.json())
+//     .then((res) => {
+//       res.map((e) => {
+//         let card = document.createElement('div')
+//         let image = document.createElement('div')
+//         let img = document.createElement('img')
+//         let title = document.createElement('div')
+//         let p = document.createElement('p')
+//         p.innerHTML = e.title
+//         img.src = e.url
+//         card.classList.add('card')
+//         card.appendChild(image)
+//         image.appendChild(img)
+//         card.appendChild(title)
+//         title.appendChild(p)
+//         cards.appendChild(card)
+//       })
+//     })
+
+
+const getData = () => {
+  fetch("https://jsonplaceholder.typicode.com/photos")
+    .then((res) => res.json())
+    .then((res) => console.log(res))
+}
+
+function getCached(func){
+  let map = new Map();
+  return (x) => {
+    if(map.has(x)){
+      map.get(x);
+    } else {
+      let res = func(x)
+      return map.set(res)
+    }
+  } 
+}
+
+getCached(getData)
