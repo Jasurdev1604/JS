@@ -812,10 +812,10 @@ let str = "JasuebekOtelbayev";
 
 //!Flag properties
 
-let user = {
-  name: "jasurbek",
-  age: 19,
-};
+// let user = {
+//   name: "jasurbek",
+//   age: 19,
+// };
 
 // let a = Object.getOwnPropertyDescriptor(user , 'name')
 
@@ -937,3 +937,170 @@ let user = {
 
 // obj.fullName = {name:'none' , age:520852}
 // obj.fullName
+
+
+//!OOP 
+
+// class Users {
+//   constructor(name){
+//     this.name = name
+//   }
+//   title = 'jasurbek'
+//   getName() {
+//     console.log(this.title);
+//   }
+//   get getInfo(){
+//     console.log(this.title);
+//   }
+//   set getInfo(v){
+//     this.title = v;
+//   }
+//   ['jasur' + 'bek'](a){
+//     console.log(a);
+//   }
+// }
+
+// let user = new Users()
+
+// user.jasurbek('nonw')
+
+// user.getInfo = 'none'
+
+// user.getInfo
+
+//!inherins meros olish
+
+// class Animals {
+//   constructor(props){
+//   }
+//   parent(a){
+//     console.log('this is parent' + a);
+//   }
+// }
+
+// class Dog extends Animals {
+//   constructor(props) {
+//     super(props)
+//   }
+//   child(){
+//     super.parent('jasur')
+//   }
+// }
+
+// let alfa = new Dog();
+
+// alfa.child()
+
+// class First{
+//   constructor(props){
+//     console.log(props);
+//   }
+// }
+
+// class Second extends First {}
+
+// let a = new First('jasur')
+// let b = new Second('none')
+
+//!static variable and static function
+
+// class Jasur{
+//   age = 15
+//   getAge(){
+//     console.log(this.age);
+//   }
+//   static year = 2004;
+//   static func(){
+//     console.log(this.year);
+//   }
+//   now(){
+//     console.log(Jasur.year);
+//   }
+// }
+
+
+// Jasur.func()
+
+//!public and private
+
+// class Protected {
+//   _name = 'jasurbek';//public
+//   #age = 19 //private
+//   get getPrivate(){
+//     console.log(this.#age);
+//   }
+//   set getPrivate(v){
+//     this.#age = v
+//   }
+// }
+
+// let p = new Protected()
+
+// p.getPrivate = 20
+// p.getPrivate
+
+// class arr extends Array{}
+// console.log(arr);
+
+// class obj extends Object{}
+// console.log(obj);
+
+//! instanceof
+
+// console.log([] instanceof Array);
+// console.log({} instanceof Array);
+
+//!mixin
+
+// class ga obj ning backgroundini bog'lab beradi
+
+// class User {
+//   getUser(){
+//     console.log('username');
+//   }
+// }
+
+// let obj = {
+//   getObj(){
+//     console.log('getObj');
+//   }
+// }
+
+// Object.assign(User.prototype , obj)
+
+// let user = new User();
+
+// user.getObj()
+
+//!try catch
+
+// try{
+//   throw new Error('none')
+// } catch(error){
+//   console.log(error);
+// } finally{
+//   console.log('finally');
+// }
+
+//!callback
+
+// let data = {
+//   login:1,
+//   pw:1,
+//   name:'jasurbek'
+// }
+
+// console.log('started');
+// const login = (login , pw , callback) => {
+//   setTimeout(() => {
+//     if(login === data.login && pw === data.pw) return callback(data.name)
+//     else return callback('none')
+//   }, 1000);
+// }
+
+// login(1 , 1 , (e) => {
+//   console.log(e);
+//   console.log('finished');
+// })
+
+//!
