@@ -1103,4 +1103,60 @@ let str = "JasuebekOtelbayev";
 //   console.log('finished');
 // })
 
-//!
+//!Promise
+
+// let base = {
+//   login:123,
+//   pw:123
+// }
+
+// let promise = new Promise((resolve , reject) => {
+//       if(base.login === 123 && base.pw === 13){
+//         resolve('welcome uka')
+//       } else {
+//         reject('good bye')
+//       }
+// })
+
+// promise.then((res) => console.log(res))
+//        .catch((err) => console.log(err))
+//        .finally(() => console.log('finally'))
+
+// let all = Promise.all([
+//   new Promise((resolve , reject) => {
+//     resolve('yes')
+//     reject('no')
+//   }),
+//   new Promise((resolve , reject) => {
+//     resolve(false)
+//     reject('no')
+//   }),
+//   new Promise((resolve , reject) => {
+//     resolve('yes')
+//     reject('no')
+//   }),
+//   new Promise((resolve , reject) => {
+//     resolve('yes')
+//     reject('no')
+//   }),
+// ])
+
+// all.then((e) => console.log(e))
+//    .catch((e) => console.log(e))
+//    .finally(() => console.log('none'))
+
+//!async await
+
+// let promise = new Promise((resolve , reject) => {
+//   setTimeout(() => {
+//     resolve('hello')
+//     reject('good bye')
+//   }, 1000);
+// })
+
+// let get = async () => {
+//   console.log('start');
+//   await promise.then((e) => console.log(e))
+//   console.log('finish');
+// }
+// get()
