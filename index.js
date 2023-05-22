@@ -870,22 +870,70 @@ let user = {
 //     })
 
 
-const getData = () => {
-  fetch("https://jsonplaceholder.typicode.com/photos")
-    .then((res) => res.json())
-    .then((res) => console.log(res))
-}
 
-function getCached(func){
-  let map = new Map();
-  return (x) => {
-    if(map.has(x)){
-      map.get(x);
-    } else {
-      let res = func(x)
-      return map.set(res)
-    }
-  } 
-}
+// let obj = {
+//   user:'user',
+//   getData(){
+//     fetch('https://jsonplaceholder.typicode.com/posts')
+//       .then(res => res.json())
+//       .then(res => console.log(res))
+//   }
+// }
 
-getCached(getData)
+// let getCached = (func) => {
+//   let map = new Map()
+//   return (x) => {
+//     if(map.has(x)) {
+//       console.log(map.get(x));
+//     } else {
+//       let res = func.call(this)
+//       map.set(x , res);
+//     }
+//   }
+// }
+
+
+// obj.getData = getCached(obj.getData)
+
+//! proto and prototype
+//proto
+// let obj1 = {
+//   name:'jasurbek',
+//   surname:'otelbayev',
+// }
+
+// let obj2 = {
+//   age:19,
+//   status:'student'
+// }
+
+// obj1.__proto__ = obj2
+
+// console.log(obj1.status);
+
+//prototype
+// Array.prototype.jasur = function(n){
+//   let res = this.filter((e) => e !== n)
+//   return res
+// }
+
+// let arr = [1 , 2 , 3 , 4 , 5]
+
+// console.log(arr.jasur(4));
+
+//!gettr and setter
+
+// const obj = {
+//   name:'jasurbek',
+//   age:19,
+//   get fullName(){
+//     console.log(this.name , this.age);
+//   },
+//   set fullName(v){
+//     this.name = v.name
+//     this.age = v.age
+//   }
+// }
+
+// obj.fullName = {name:'none' , age:520852}
+// obj.fullName
