@@ -1212,22 +1212,47 @@ let str = "JasuebekOtelbayev";
 
 // console.log([...gen]);
 
-let counter = 0;
-function* a(){
-  while(true){
-    let p = yield;
-    if(p){
-      counter += p;
-    }
-  }
-}
-setTimeout(() => {
-  console.log(counter);
-},1000)
+// let counter = 0;
+// function* a(){
+//   while(true){
+//     let p = yield;
+//     if(p){
+//       counter += p;
+//     }
+//   }
+// }
+// setTimeout(() => {
+//   console.log(counter);
+// },1000)
 
-const b = a();
+// const b = a();
 
-b.next()
-b.next(1)
-b.next(2)
-b.next(3)
+// b.next()
+// b.next(1)
+// b.next(2)
+// b.next(3)
+
+//! modules
+
+// import { student } from "./mock";
+
+// student()
+
+// users.map((e) => {
+//   let tr = document.createElement('tr')
+//   let id = document.createElement('td')
+//   let name = document.createElement('td')
+//   let age = document.createElement('td')
+//   let status = document.createElement('td')
+//   id.innerHTML = e.id
+//   name.innerHTML = e.name
+//   age.innerHTML = e.age
+//   status.innerHTML = e.status
+//   tr.appendChild(id)
+//   tr.appendChild(name)
+//   tr.appendChild(age)
+//   tr.appendChild(status)
+//   table.appendChild(tr)
+// })
+
+
