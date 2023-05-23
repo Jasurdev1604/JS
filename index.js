@@ -1296,40 +1296,41 @@ let str = "JasuebekOtelbayev";
 
 //!proxy vazifasi validation
 
-let user = {
-  name:'jasurbek',
-  _age:19,
-  fullName:'Jasurbek Otelbayev',
-  to:50,
-  from:10,
-}
+// let user = {
+//   name:'jasurbek',
+//   _age:19,
+//   fullName:'Jasurbek Otelbayev',
+//   to:50,
+//   from:10,
+// }
 
-let proxy = new Proxy(user , {
-  //!private bolgan keyni korsatmaydi
-  get(target , prop){
-    if(prop.startsWith('_')){
-      return 'this is private bro'
-    } else {
-      return target[prop]
-    }
-  },
-  //! private bolgan keyni ozgartiemaydi
-  set(target , prop , value){
-    if(prop.startsWith('_')){
-      return false
-    } else {
-      target[prop] = value;
-      return true
-    }
-  },
-  //!private bolgan keyni loop da yashiradi
-  ownKeys(target){
-    return Object.keys(target).filter((e) => !e.startsWith('_'))
-  },
-  has(target , prop){
-    return target.from < prop && target.to > prop
-  }
-})
+// let proxy = new Proxy(user , {
+//   //!private bolgan keyni korsatmaydi
+//   get(target , prop){
+//     if(prop.startsWith('_')){
+//       return 'this is private bro'
+//     } else {
+//       return target[prop]
+//     }
+//   },
+//   //! private bolgan keyni ozgartiemaydi
+//   set(target , prop , value){
+//     if(prop.startsWith('_')){
+//       return false
+//     } else {
+//       target[prop] = value;
+//       return true
+//     }
+//   },
+//   //!private bolgan keyni loop da yashiradi
+//   ownKeys(target){
+//     return Object.keys(target).filter((e) => !e.startsWith('_'))
+//   },
+//!oraliqqa tekshirtadi
+//   has(target , prop){
+//     return target.from < prop && target.to > prop
+//   }
+// })
 
 // proxy._age = 50;
 
@@ -1337,4 +1338,4 @@ let proxy = new Proxy(user , {
 //   console.log(key);
 // }
 
-console.log(20 in proxy);
+// console.log(20 in proxy);
