@@ -1255,4 +1255,86 @@ let str = "JasuebekOtelbayev";
 //   table.appendChild(tr)
 // })
 
+//!curry function
 
+// let sum = (a) => {
+//   return (b) => {
+//     if(b){
+//     return sum(a + b)
+//     }
+//     return a
+//   }
+// }
+
+// console.log(sum(1)(2)(3)());
+
+// let curry = (...params) => {
+//   switch(params[0]){
+//     case 'add':
+//       params = params.slice(1);
+//       console.log(eval(params.join('+')));
+//       break;
+//     case 'multiplication':
+//       params = params.slice(1);
+//       console.log(eval(params.join('*')));
+//       break;
+//   }
+// }
+
+// console.log(curry("add" , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9));
+// console.log(curry("multiplication" , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9));
+
+//!proxy
+
+// console.log(Object.getOwnPropertyDescriptor(user));
+
+// Object.defineProperty(user , 'login' , {
+//   value:'none'
+// })
+
+// console.log(user);
+
+//!proxy vazifasi validation
+
+let user = {
+  name:'jasurbek',
+  _age:19,
+  fullName:'Jasurbek Otelbayev',
+  to:50,
+  from:10,
+}
+
+let proxy = new Proxy(user , {
+  //!private bolgan keyni korsatmaydi
+  get(target , prop){
+    if(prop.startsWith('_')){
+      return 'this is private bro'
+    } else {
+      return target[prop]
+    }
+  },
+  //! private bolgan keyni ozgartiemaydi
+  set(target , prop , value){
+    if(prop.startsWith('_')){
+      return false
+    } else {
+      target[prop] = value;
+      return true
+    }
+  },
+  //!private bolgan keyni loop da yashiradi
+  ownKeys(target){
+    return Object.keys(target).filter((e) => !e.startsWith('_'))
+  },
+  has(target , prop){
+    return target.from < prop && target.to > prop
+  }
+})
+
+// proxy._age = 50;
+
+// for (const key in proxy) {
+//   console.log(key);
+// }
+
+console.log(20 in proxy);
