@@ -1163,8 +1163,71 @@ let str = "JasuebekOtelbayev";
 
 //!generator function
 
-function* generator(){
-  yield 1;
-  yield 2;
-  yield 3;
+// function* generator(){
+//   yield 1;
+//   yield 2;
+//   yield 3;
+// }
+
+// let gen = generator();
+
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+
+// function* generator(){
+//   let a = 0
+//   while(true){
+//     yield a++
+//     if(a === 3) return a
+//   }
+// }
+
+// let gen = generator();
+
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+
+// for(let value of gen){
+//   console.log(value);
+// }
+
+// console.log([...gen]);
+
+//!params
+
+// function* generator(array) {
+//   for(let value of array){
+//     yield value
+//   }
+// }
+
+// let arr = [1 , 2 , 3 , 5]
+
+// const gen = generator(arr)
+
+// console.log([...gen]);
+
+let counter = 0;
+function* a(){
+  while(true){
+    let p = yield;
+    if(p){
+      counter += p;
+    }
+  }
 }
+setTimeout(() => {
+  console.log(counter);
+},1000)
+
+const b = a();
+
+b.next()
+b.next(1)
+b.next(2)
+b.next(3)
