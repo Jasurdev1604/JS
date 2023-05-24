@@ -5,21 +5,21 @@
 //!element -> faqat teglarni qiymat sifatida oladi
 
 
-let h1 = document.getElementById('h1');
+// let h1 = document.getElementById('h1');
 
-h1.innerHTML = 'jasurbek'
+// h1.innerHTML = 'jasurbek'
 
 // console.log(h1.outerHTML);
 
-let none = document.getElementById('none')
-none.setAttribute('class' , 'red')
+// let none = document.getElementById('none')
+// none.setAttribute('class' , 'red')
 
-none.style.cssText = `
-    background:blue;
-    color:green;
-`
+// none.style.cssText = `
+//     background:blue;
+//     color:green;
+// `
 
-let box = document.getElementsByClassName('box')
+// let box = document.getElementsByClassName('box')
 
 // console.log(box[0].offsetHeight);
 // console.log(box[0].clientHeight);
@@ -30,17 +30,17 @@ let box = document.getElementsByClassName('box')
 // console.log(box[0].offsetTop);
 // console.log(box[0].offsetLeft);
 
-let a = box[0].scrollHeight
+// let a = box[0].scrollHeight
 
-console.log(a);
+// console.log(a);
 
-const more = () => {
-    box[0].style.height = `${a}px`
-}
+// const more = () => {
+//     box[0].style.height = `${a}px`
+// }
 
-const less = () => {
-    box[0].style.height = '400px'
-}
+// const less = () => {
+//     box[0].style.height = '400px'
+// }
 
 // const btn = () => {
 //     box[0].scroll({top:200 , behavior:'smooth'})
@@ -95,16 +95,58 @@ const less = () => {
 
 //!Bubling
 
-let parent = document.querySelector('.parent')
-let child = document.querySelector('.child')
+// let parent = document.querySelector('.parent')
+// let child = document.querySelector('.child')
 
-parent.addEventListener('click' , (e) => {
-    console.log('this is parent');
-    // e.stopImmediatePropagation()
-})
+// parent.addEventListener('click' , (e) => {
+//     console.log('this is parent');
+//     // e.stopImmediatePropagation()
+// })
 
-child.addEventListener('click' , (e) => {
-    console.log('this is child');
-    // e.stopImmediatePropagation()
-   
-})
+// child.addEventListener('click' , (e) => {
+//     console.log('this is child');
+//     // e.stopImmediatePropagation()
+// })
+
+//!Form
+
+
+// function myFunction(val) {
+//     alert("The input value has changed. The new value is: " + val);
+//   }
+
+// document.getElementById('none').addEventListener('keydown' , (e) => {
+//     console.log(e.type);
+// })
+
+// let f = document.forms.jasur.none
+
+// console.log(f);
+
+//!select
+
+// let select = document.getElementById('select')
+
+// console.log(select.options[1].value);
+// console.log(select.selectedIndex = 1);
+
+// let login = document.getElementById("login")
+
+// login.onblur = ({target:{value}}) => {
+//     if(!value.includes("@")){
+//         document.getElementById('error').innerHTML = 'qwertyuiop'
+//     }
+//      else {
+//         document.getElementById('error').innerHTML = ''
+//     }
+// }
+
+//     login.onfocus = () => { 
+//         document.getElementById('error').innerHTML = null
+//     }
+
+// document.getElementById('jasurbek').addEventListener("submit" , (e) => {
+//     e.preventDefault()
+//     fetch(`https://jsonplaceholder.typicode.com/${document.getElementById('select').value}`).then(res => res.json()).then(res => console.log(res))
+// })
+
