@@ -42,11 +42,69 @@ const less = () => {
     box[0].style.height = '400px'
 }
 
-const btn = () => {
-    // box[0].scroll({top:200 , behavior:'smooth'})
-    // box[0].scrollBy({top:200 , behavior:'smooth'})
-    // box[0].scrollTo({top:200 , behavior:'smooth'})
-    // console.log(box[0].getBoundingClientRect());
-}
+// const btn = () => {
+//     box[0].scroll({top:200 , behavior:'smooth'})
+//     box[0].scrollBy({top:200 , behavior:'smooth'})
+//     box[0].scrollTo({top:200 , behavior:'smooth'})
+//     console.log(box[0].getBoundingClientRect());
+// }
 
 //!mouse events
+
+// let btn = document.getElementById("button")
+
+// btn.addEventListener('contextmenu' , () => {
+//     console.log('contextmenu');
+// })
+
+// btn.addEventListener('dblclick' , () => {
+//     console.log('dblclick');
+// })
+
+// btn.addEventListener('mousedown' , () => {
+//     console.log('mousedown');
+// })
+
+// btn.addEventListener('mouseenter' , () => {
+//     console.log('mouseenter');
+// })
+
+// btn.addEventListener('mouseleave' , () => {
+//     console.log('mouseleave');
+// })
+
+// btn.addEventListener('mousemove' , () => {
+//     console.log('mousemove');
+// })
+
+// btn.addEventListener('mouseout' , () => {
+//     console.log('mouseout');
+// })
+
+// btn.addEventListener('mouseover' , () => {
+//     console.log('mouseover');
+// })
+
+// btn.addEventListener('mouseup' , () => {
+//     console.log('mouseup');
+// })
+
+// btn.addEventListener('click' , () => {
+//     console.log('click');
+// })
+
+//!Bubling
+
+let parent = document.querySelector('.parent')
+let child = document.querySelector('.child')
+
+parent.addEventListener('click' , (e) => {
+    console.log('this is parent');
+    // e.stopImmediatePropagation()
+})
+
+child.addEventListener('click' , (e) => {
+    console.log('this is child');
+    // e.stopImmediatePropagation()
+   
+})
